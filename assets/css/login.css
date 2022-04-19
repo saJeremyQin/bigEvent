@@ -1,0 +1,65 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    /* 背景图片只显示一次，居中，图片扩展到足够大 */
+    background: url("/assets/images/login_bg.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.LoginRegBox {
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title-box {
+    /* 这里一定要指定高度，否则不显示 */
+    height: 60px;
+    background: url("/assets/images/login_title.png") no-repeat center;
+}
+
+.reg-box {
+    display: none;
+}
+
+.layui-form {
+    padding: 0 30px;
+}
+
+.links {
+    /* 设置为容器，并指定由右或下开始排列 */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links a {
+    font-size: 12px;
+}
+
+
+/* 子绝父相 */
+
+.layui-form-item {
+    position: relative;
+}
+
+
+/* 指定icon相对div的位置  */
+
+.layui-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.layui-input {
+    /*设置左内边距 */
+    padding-left: 30px;
+}
