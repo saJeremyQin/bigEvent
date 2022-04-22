@@ -1,0 +1,71 @@
+.layui-footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+.iconfont {
+    margin-right: 8px;
+}
+
+.layui-icon {
+    margin-right: 8px;
+    margin-left: 18px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 为什么这句话可以实现隐藏掉外部的那个滚动条呢？这里属于哪种情况
+1. 溢出隐藏 -- 若layui-body元素的内容超出指定的宽高，超出的部分隐藏
+2. 清除浮动 --由于父级元素没有高度，下面的元素会顶上去，造成页面的塌陷。
+因此，需要给父级加个overflow:hidden属性，这样父级的高度就随子级容器及子级内容的高度而自适应。
+3. 解决外边距塌陷 --https://blog.csdn.net/qq_41638795/article/details/83304388 */
+
+.layui-body {
+    overflow: hidden;
+}
+
+a {
+    transition: none !important;
+}
+
+
+/* 为头部区域的a链接和左侧导航区域的头像div指定样式 */
+
+.userinfo {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 12px;
+    user-select: none;
+}
+
+.layui-side-scroll .userinfo {
+    border-bottom: 1px solid #282b33;
+}
+
+.layui-nav-img {
+    height: 40px;
+    width: 40px;
+}
+
+#welcome {
+    font-size: 12px;
+}
+
+.text_avatar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #009688;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+}
