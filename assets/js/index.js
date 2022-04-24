@@ -46,7 +46,7 @@ function renderAvatar(user) {
 
     // 1. 获取用户名称
     var name = user.nickname || user.username
-    console.log(name);
+        //console.log(name);
 
     // x = 5 | 1
     // 0101 0101 0101
