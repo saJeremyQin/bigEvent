@@ -29,12 +29,14 @@ $(function() {
                     return layer.msg('获取用户信息失败')
 
                 //给表单快速赋值
-                form.val('form-userinfo', res.data)
+                console.log('我要开始赋值了');
 
-                // // 获取用户信息，初始化表单
-                // $("#userinfo_form [name=username]").val(res.data.username)
-                // $("#userinfo_form [name=nickname]").val(res.data.nickname)
-                // $("#userinfo_form [name=email]").val(res.data.email)
+                // form.val('form-userinfo', res.data)
+
+                // 获取用户信息，初始化表单
+                $("#userinfo_form [name=username]").val(res.data.username)
+                $("#userinfo_form [name=nickname]").val(res.data.nickname)
+                $("#userinfo_form [name=email]").val(res.data.email)
             }
         })
     }

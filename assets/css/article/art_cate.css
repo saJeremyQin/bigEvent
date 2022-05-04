@@ -1,0 +1,25 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-left: 15px;
+    background-color: #f2f3f5;
+}
+
+
+/* 设定卡片头部的span和btn的布局方式 */
+
+.layui-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#form-add,
+#form-Revise {
+    padding-top: 20px;
+    padding-right: 30px;
+}
