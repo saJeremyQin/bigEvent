@@ -43,12 +43,15 @@ $(function() {
     // 监听fileU的change事件
     $('#fileU').on('change', function(e) {
         var filelist = e.target.files
+        console.log(filelist);
+
 
         if (filelist.length === 0)
             return layer.msg('请选择头像')
 
         // 获取选择的文件
         var file = e.target.files[0]
+
 
         //createObjectURL返回一个DOMString，包含了一个对象URL，该URL可用于指定源 object的内容
         var newImageURL = URL.createObjectURL(file)
@@ -95,9 +98,15 @@ $(function() {
             console.log(blob);
         })
 
-        fd.forEach(function(value, key) {
-            console.log(key, value);
-        })
+        // fd.forEach(function(value, key) {
+        //     console.log(key, value);
+        // })
+
+        var dd = fd.get('cover_img')
+        console.log(dd);
+
+        if (dd.name === '')
+            return layer.msg('请选择文章封面')
         publishArticle(fd)
     })
 
